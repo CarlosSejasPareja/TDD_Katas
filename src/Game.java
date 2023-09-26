@@ -17,7 +17,7 @@ public class Game {
                 score+=10+spareBonus(frameIndex);
                 frameIndex+=2;
             }else{
-               score+=rolls[frameIndex]+rolls[frameIndex+1];
+               score+=sumOfBallsInFrame(frameIndex);
                frameIndex+=2;
             }
 
@@ -33,8 +33,11 @@ public class Game {
     private int strikeBonus(int frameIndex){
         return rolls[frameIndex+1]+rolls[frameIndex+2];
     }
-     private int spareBonus(int frameIndex){
+    private int spareBonus(int frameIndex){
         return rolls[frameIndex+2];
+    }
+    private int sumOfBallsInFrame(int frameIndex){
+        return rolls[frameIndex]+rolls[frameIndex+1];
     }
 
 
