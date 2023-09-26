@@ -22,6 +22,14 @@ public class BowlingGameTest extends TestCase {
         rollMany(17, 0);
         assertEquals(16, g.score());
     }
+    public void testOneStrike()throws Exception{
+        g.roll(10);
+        g.roll(3);
+        g.roll(4);
+        rollMany(16, 0);
+        assertEquals(24, g.score());
+
+    }
      private void rollMany(int n, int pins){
         for(int i=0;i<n;i++){
             g.roll(pins);
