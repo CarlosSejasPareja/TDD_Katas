@@ -30,6 +30,10 @@ public class BowlingGameTest extends TestCase {
         assertEquals(24, g.score());
 
     }
+    public void testGamePerfect()throws Exception{
+        rollMany(21, 10);
+        assertEquals(300,g.score());
+    }
      private void rollMany(int n, int pins){
         for(int i=0;i<n;i++){
             g.roll(pins);
