@@ -20,7 +20,6 @@ public class Game {
                score+=sumOfBallsInFrame(frameIndex);
                frameIndex+=2;
             }
-
         }
         return score;
     }
