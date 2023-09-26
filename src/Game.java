@@ -14,7 +14,7 @@ public class Game {
                score+=10+strikeBonus(frameIndex);
                frameIndex++; 
             }else if(isSpare(frameIndex)){
-                score+=10+rolls[frameIndex+2];
+                score+=10+spareBonus(frameIndex);
                 frameIndex+=2;
             }else{
                score+=rolls[frameIndex]+rolls[frameIndex+1];
@@ -33,5 +33,9 @@ public class Game {
     private int strikeBonus(int frameIndex){
         return rolls[frameIndex+1]+rolls[frameIndex+2];
     }
+     private int spareBonus(int frameIndex){
+        return rolls[frameIndex+2];
+    }
+
 
 }
